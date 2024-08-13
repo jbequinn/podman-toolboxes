@@ -1,5 +1,13 @@
 #!/bin/bash
 
+directory=$1
+
+if [ -z "$directory" ];then
+	echo "Usage: build.sh <directory>"
+	exit 1
+fi
+
+cd $directory
 name=$(basename "$PWD")
 
 if [ -z "$name" ]; then

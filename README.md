@@ -5,6 +5,5 @@ https://github.com/toolbx-images/images
 
 ## Build
 ```
-cd <directory>
-../build.sh
+./build.sh <directory_name>
 ```

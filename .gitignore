@@ -1,0 +1,10 @@
+.env
+# app.env, db.env, etc
+*.env
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+

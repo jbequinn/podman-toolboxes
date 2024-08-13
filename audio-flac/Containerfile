@@ -1,0 +1,11 @@
+FROM quay.io/toolbx-images/debian-toolbox:12
+
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
+
+RUN apt update -y && apt install -y \
+    flac \
+    wavpack \
+    parallel \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*

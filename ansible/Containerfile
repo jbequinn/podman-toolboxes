@@ -1,0 +1,4 @@
+FROM registry.fedoraproject.org/fedora-toolbox:40
+
+RUN dnf -y update && dnf -y install ansible curl powerline
+RUN dnf clean all

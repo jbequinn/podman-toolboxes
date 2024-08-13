@@ -1,0 +1,13 @@
+FROM registry.fedoraproject.org/fedora-toolbox:40
+
+ENV SDKMAN_DIR="/usr/local/sdkman"
+
+RUN dnf -y update && dnf -y install curl httpie powerline
+RUN dnf clean all
+
+# Install without modifying shell config - needs to be set up already
+RUN curl -s "https://get.sdkman.io?rcupdate=false" | bash && source "$SDKMAN_DIR/bin/sdkman-init.sh" && \
+    sdk install java 21-tem && \
+    sdk install maven && \
+    sdk install gradle && \
+    rm -rf $SDKMAN_DIR/archives/*

@@ -7,5 +7,6 @@ RUN apt update -y && apt install -y \
     flac \
     wavpack \
     parallel \
+    rename \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*

@@ -1,4 +1,4 @@
-FROM quay.io/toolbx-images/debian-toolbox:12
+FROM quay.io/toolbx-images/debian-toolbox:13
 
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
